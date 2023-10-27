@@ -123,6 +123,16 @@ function searchResults(search) {
   https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_text_query=${search}`, options)
     .then(response => response.json())
     .then(data => displaySearchResults(data.results, div))
+    .then(() => {
+      const moviesImages = document.querySelectorAll(`#${div} img`);
+      moviesImages.forEach(image => {
+        image.addEventListener('click', function (event) {
+          event.preventDefault();
+          const movieId = this.getAttribute('alt');
+          openModal(movieId);
+        });
+      });
+    })
     .catch(err => console.error(err));
 }
 
@@ -156,14 +166,6 @@ function createModal(movies) {
   });
 }
 
-const moviesImages = document.querySelectorAll('.poster img');
-moviesImages.forEach(image => {
-  image.addEventListener('click', function (event) {
-    event.preventDefault();
-    const movieId = this.getAttribute('alt');
-    openModal(movieId);
-  });
-});
 
 const close = document.querySelectorAll('.modal_close');
 close.forEach(button => {
