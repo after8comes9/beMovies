@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>beMovies</title>
 </head>
+
 <body>
 
-        <section class="section1">
-            <header>
-                <div class="logo"><span>be</span>movies</div>
-                <div class="nav">
-                    <a class="search" href="#section2">search</a>
-                    <a class="latest" href="#section3">latest</a>
-                    <a class="genres" href="#section4">genres</a>
-                    <a class="register" href="#">register</a>
-                    <a class="signin" href="#">signin</a>
-                </div>
-            </header>
-        </section>
+    <section class="section1">
+        <header>
+            <div class="logo"><span>be</span>movies</div>
+            <div class="nav">
+                <a class="search" href="#section2">search</a>
+                <a class="latest" href="#section3">latest</a>
+                <a class="genres" href="#section4">genres</a>
+                <a class="register" href="#">register</a>
+                <a class="signin" href="#">signin</a>
+            </div>
+        </header>
+    </section>
     </div>
 
     <section id="section2">
         <div class="container">
-            <form class="searchBar">
-                <input class="searchInput" type="text" name="searchInput" id="searchInput" placeholder="Enter the name of a movie.."><label for="searchInput"><input class="searchBtn" type="submit" name="searchBtn" id="searchBtn" value=" "></label>
+            <form class="searchBar" id="searchBar">
+                <input class="searchInput" type="text" name="searchInput" id="searchInput"
+                    placeholder="Enter the name of a movie.."><label for="searchInput"><input class="searchBtn"
+                        type="submit" name="searchBtn" id="searchBtn" value=" "></label>
             </form>
             <div class="searchResults">
                 <p>Results for “<span>godfather</span>”</p>
                 <div class="films">
                     <a class="prevEl1" href="#"><img src="img/arrow.svg" alt=""></a>
                     <div class="swiper swiper1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                        <div class="swiper-wrapper" id="searchResult">
+                            <!--                             <div class="swiper-slide">
                                 <div class="poster"></div>
                             </div>
                             <div class="swiper-slide">
@@ -52,7 +56,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="poster"></div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <a class="nextEl1" href="#"><img src="img/arrow.svg" alt=""></a>
@@ -67,8 +71,8 @@
             <div class="films">
                 <a class="prevEl2" href="#"><img src="img/arrow.svg" alt=""></a>
                 <div class="swiper swiper2">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                    <div class="swiper-wrapper" id="latestRelease">
+                        <!-- <div class="swiper-slide">
                             <div class="poster"></div>
                         </div>
                         <div class="swiper-slide">
@@ -85,7 +89,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="poster"></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <a class="nextEl2" href="#"><img src="img/arrow.svg" alt=""></a>
@@ -96,19 +100,19 @@
     <section id="section4">
         <div class="container">
             <p>movies by genre</p>
-            <div class="genreNav">
-                <a href="#">Comedy</a>
-                <a href="#">Drama</a>
-                <a href="#">Action</a>
-                <a href="#">Romance</a>
-                <a href="#">Fantasy</a>
-                <a href="#">Animation</a>
+            <div class="genreNav" id="genreNav">
+                <button class="btnGenre">Comedy</button>
+                <button class="btnGenre">Drama</button>
+                <button class="btnGenre">Action</button>
+                <button class="btnGenre">Romance</button>
+                <button class="btnGenre">Fantasy</button>
+                <button class="btnGenre">Animation</button>
             </div>
             <div class="films">
                 <a class="prevEl3" href="#"><img src="img/arrow.svg" alt=""></a>
                 <div class="swiper swiper3">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                    <div class="swiper-wrapper" id="genre">
+                        <!-- <div class="swiper-slide">
                             <div class="poster"></div>
                         </div>
                         <div class="swiper-slide">
@@ -125,7 +129,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="poster"></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <a class="nextEl3" href="#"><img src="img/arrow.svg" alt=""></a>
@@ -150,7 +154,7 @@
     <section class="modalInfo">
         <div class="container">
             <div class="poster"><img src="img/3a9723ae5397841adf7fbaed84bd30b2.jpeg" alt=""></div>
-            <div class="info">
+            <!-- <div class="info">
                 <h1>The Godfather</h1>
                 <h2>1972</h2>
                 <h3><img src="img/star.svg" alt="">8.7</h3>
@@ -159,8 +163,8 @@
                 <div class="cast">
                     <h4>cast:</h4>
                     <p>Marlon Brando, Al Pacino, James Caan, Robert Duvall</p>
-                </div>
-            </div>
+                </div> -->
+        </div>
         </div>
         <div class="greyOut"></div>
     </section>
@@ -168,8 +172,12 @@
     <section class="modalReg">
         <div class="container">
             <div class="signUpLogin">
-                <a href="#"><div class="signup">Signup</div></a>
-                <a href="#"><div class="login">Login</div></a>
+                <a href="#">
+                    <div class="signup">Signup</div>
+                </a>
+                <a href="#">
+                    <div class="login">Login</div>
+                </a>
             </div>
             <form>
                 <input class="username" type="text" name="username" id="username" placeholder="Username">
@@ -188,4 +196,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
 </body>
+
 </html>
