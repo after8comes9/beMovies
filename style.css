@@ -530,3 +530,7 @@ margin-top: 0.25rem;
     font-size: 32px;
     font-weight: 700;
 }
+
+.swiper-slide{
+    flex-shrink: 1!important;
+}
