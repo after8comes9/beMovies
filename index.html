@@ -10,11 +10,11 @@
 </head>
 <body>
 
-        <section class="section1">
+        <section id="section1">
             <header>
                 <div class="logo"><span>be</span>movies</div>
                 <div class="nav">
-                    <a class="search" href="#section2">search</a>
+                    <a class="search" href="#top">search</a>
                     <a class="latest" href="#section3">latest</a>
                     <a class="genres" href="#section4">genres</a>
                     <a class="register" href="#">register</a>
@@ -27,32 +27,16 @@
     <section id="section2">
         <div class="container">
             <form class="searchBar">
-                <input class="searchInput" type="text" name="searchInput" id="searchInput" placeholder="Enter the name of a movie.."><label for="searchInput"><input class="searchBtn" type="submit" name="searchBtn" id="searchBtn" value=" "></label>
+                <input class="searchInput" type="text" name="searchInput" id="searchInput" placeholder="Enter the name of a movie.."><label for="searchInput"><input class="searchBtn" type="submit" name="searchBtn" id="searchBtn" value=" "></label><br>
+                <div class="noResults"></div>
             </form>
+            
             <div class="searchResults">
-                <p>Results for “<span>godfather</span>”</p>
+                <p>Results for “<span></span>”</p>
                 <div class="films">
                     <a class="prevEl1" href="#"><img src="img/arrow.svg" alt=""></a>
                     <div class="swiper swiper1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="poster"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div div class="poster"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="poster"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="poster"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="poster"></div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="poster"></div>
-                            </div>
                         </div>
                     </div>
                     <a class="nextEl1" href="#"><img src="img/arrow.svg" alt=""></a>
@@ -68,24 +52,7 @@
                 <a class="prevEl2" href="#"><img src="img/arrow.svg" alt=""></a>
                 <div class="swiper swiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
+  
                     </div>
                 </div>
                 <a class="nextEl2" href="#"><img src="img/arrow.svg" alt=""></a>
@@ -97,35 +64,18 @@
         <div class="container">
             <p>movies by genre</p>
             <div class="genreNav">
-                <a href="#">Comedy</a>
-                <a href="#">Drama</a>
-                <a href="#">Action</a>
-                <a href="#">Romance</a>
-                <a href="#">Fantasy</a>
-                <a href="#">Animation</a>
+                <a id="comedy" class="activeGenre" href="#">Comedy</a>
+                <a id="drama" href="#">Drama</a>
+                <a id="action" href="#">Action</a>
+                <a id="romance" href="#">Romance</a>
+                <a id="fantasy"href="#">Fantasy</a>
+                <a id="animation" href="#">Animation</a>
             </div>
             <div class="films">
                 <a class="prevEl3" href="#"><img src="img/arrow.svg" alt=""></a>
                 <div class="swiper swiper3">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="poster"></div>
-                        </div>
+                        
                     </div>
                 </div>
                 <a class="nextEl3" href="#"><img src="img/arrow.svg" alt=""></a>
@@ -149,18 +99,20 @@
 
     <section class="modalInfo">
         <div class="container">
-            <div class="poster"><img src="img/3a9723ae5397841adf7fbaed84bd30b2.jpeg" alt=""></div>
+            <div class="poster"></div>
+            <!--
             <div class="info">
-                <h1>The Godfather</h1>
-                <h2>1972</h2>
-                <h3><img src="img/star.svg" alt="">8.7</h3>
-                <h4>crime/drama</h4>
-                <p class="summary">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</p>
+                <h1></h1>
+                <h2></h2>
+                <div class="score"><img src="img/star.svg" alt=""><h3></h3></div>
+                <h4></h4>
+                <p class="summary"></p>
                 <div class="cast">
                     <h4>cast:</h4>
-                    <p>Marlon Brando, Al Pacino, James Caan, Robert Duvall</p>
+                    <p class="actors"></p>
                 </div>
             </div>
+            -->
         </div>
         <div class="greyOut"></div>
     </section>
@@ -171,7 +123,7 @@
                 <a href="#"><div class="signup">Signup</div></a>
                 <a href="#"><div class="login">Login</div></a>
             </div>
-            <form>
+            <form class="reglog">
                 <input class="username" type="text" name="username" id="username" placeholder="Username">
                 <input class="password" type="password" name="password" id="password" placeholder="Password">
                 <div class="remember">

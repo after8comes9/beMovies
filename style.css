@@ -19,18 +19,18 @@ html {
 /***** Header and footer *****/
 
 
-.section1 {
+#section1 {
     position: sticky;
     top:0;
     z-index: 2;
 }
 
-.section1, .section5 {
+#section1, .section5 {
     background-color: #141517;
     width: 100vw;
 }
 
-.section1 header, .section5 footer {
+#section1 header, .section5 footer {
     width: 90vw;
     margin-inline: auto;
     display: flex;
@@ -38,7 +38,7 @@ html {
     align-items: center;
 }
 
-.section1 header {
+#section1 header {
     height: 6.25rem;
 }
 
@@ -67,6 +67,10 @@ html {
     margin-left: 1.8125rem;
 }
 
+.nav a:hover {
+    color: #C00;
+}
+
 .copyright {
     color: #B8B8B8;
     font-size: 0.875rem;
@@ -87,14 +91,19 @@ html {
     }
 
 .searchBar {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 #section2  {
     padding-top: 5rem;
 }
 
-#section3, #section4  {
+#section2 .swiper {
+    margin-bottom: 10rem;
+}
+
+
+#section4  {
     padding-top: 10rem;
 }
 
@@ -118,11 +127,27 @@ p {
     
 .genreNav {
     display: flex;
+    align-items: center;
     gap: 2rem;
     border-bottom: solid 1px white;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
     margin-top: 2rem;
+}
+
+.activeGenre {
+    background-color: #CC0000;
+    border-radius: 8px;
+    width: 84px;
+    height: 33px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    line-height: 2rem;
+}
+
+.noResults {
+    margin-top: 1rem;
+    color: #C00;
+    text-align: left;
 }
 
 /***** Search Bar *****/
@@ -152,6 +177,14 @@ p {
 
 
 /***** Swipers *****/
+
+.searchResults {
+    display: none;
+}
+
+.noResults {
+    display: none;
+}
 
 .films {
     display: flex;
@@ -189,6 +222,11 @@ p {
 .swiper {
     width: 62rem;
 }
+
+.poster img:hover {
+    cursor: pointer;
+}
+
 
 .swiper .poster {
     width: 14.625rem;
@@ -249,7 +287,19 @@ p {
     border-right: none;
 }
 
+.signupactive {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    border: 1px solid #C00;
+    background-color: #C00;
+}
+
 .login {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    border: 1px solid #FFF;
+    border-left: none;
+}
+
+.loginactive {
     border-radius: 0rem 0.5rem 0.5rem 0rem;
     border: 1px solid #C00;
     background-color: #C00;
@@ -281,6 +331,7 @@ p {
     text-transform: uppercase;
     margin-block: 2rem;
 }
+
 
 .modalReg .container form p, .modalReg .container form a {
     align-self: flex-start;
@@ -342,7 +393,7 @@ p {
 
 .modalInfo .container {
     width: 46.375rem;
-    height: 32.875rem;
+    height: 40rem;
     background: #000;
     position: fixed;
     left: 0;
@@ -392,12 +443,13 @@ p {
     margin-bottom: 1rem;
 }
 
-.modalInfo .container h3 {
+.modalInfo .container .score {
     color: #C00;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-
+    display: flex;
+    gap: 0.5rem;
 }
 
 .modalInfo .container h4 {
@@ -426,4 +478,55 @@ p {
 
 .modalInfo .container .cast h4 {
 margin-top: 0.25rem;
+}
+
+.hoverInfo:hover {
+    cursor: pointer;
+}
+
+.hoverInfo  {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    width: 14.625rem;
+    height: 21.9375rem;
+    padding: 2rem;
+}
+
+.hoverInfo h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hoverInfo h2 {
+    font-family: 'Inter', sans-serif;
+    color: #B0B0B0;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.hoverInfo h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.hoverInfo img {
+    width: 3rem;
+
+}
+
+.hoverInfo h4 {
+    color: #C00;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
 }
